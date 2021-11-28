@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="">
+      <fieldset>
+        <!--agrupa campos en una caja-->
+        <legend>Datos del usuario</legend>
+        <!--texto para la caja que envuelve un conjunto de campos-->
+        <label for="nombre">nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre del usuario" /><br />
+        <label for="edad">Edad</label>
+        <input type="number" name="esdad" id="edad" placeholder="Edad" /><br />
+        <label for="contrasena">Contrasenia</label>
+        <input type="password" name="contrasenia" id="contrasenai" /><br />
+        <input
+          type="submit"
+          name=""
+          id=""
+          value="aceptar"
+        /><!--con el value le cambiamos el texto--><br />
+        <button type="submit">aceptar</button><br />
+        <label for="textarea">textarea:</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea
+        ><!--expandible-->
+        <br />
+        <label for="combo">Combo box</label>
+        <select name="combo" id="combo">
+          <option value="1">Goku</option>
+          <option value="2">Vegeta</option>
+          <option value="3">Gohan</option></select
+        ><br />
+      </fieldset>
+    </form>
+  </body>
+</html>

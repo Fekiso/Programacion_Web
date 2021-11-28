@@ -1,0 +1,73 @@
+/*CSS:cascada style sheet: es lineal de arriba hacia abajo*/
+
+/* selectores: etiquetas html */
+body {
+  background-color: #eee;
+  color: #505055;
+}
+
+/*selectore: id: identificador unico para un elemento html. se usa el numeral para definirlo.*/
+#primerSpan {
+  color: blue;
+}
+/*selectore: clase: para cuando queremos hacer una composcion de estilos sobre un elemento html o para cuando queremos compartir el estilo a lo largo de varias etiquetas html. se usa el punto para definirlo*/
+.segundoSpan {
+  color: chartreuse;
+}
+
+.caja {
+  margin: 8px; /*Margin bordea el contenido pero por fuera del contenedor, desplazando el objeto al centro*/
+  padding: 8px; /*padding bordea el contenido pero por dentro del contenedor*/
+  border-style: dotted solid double inset; /*boordea el limite del contenido, y se encuentra entre el padding y el margin. puede ser solid(linea continua), dash(linea punteada), dotted(lina de puntos), double(dos lineas solid), groove(un tipo de sombra blanca hacia arriba), ridge(sombra hacia abajo), inset (presionado), outset(contrario a inset), none(ninguno), hidden(none) y pueden ser convinados considerando que afectan asi: arriba derecha abajo izquierda, ej: dotted, solid,double, inset*/
+  border-width: 8px; /*ancho del borde*/
+  border-color: darkgreen;
+  border-left: 6px outset #000; /*se puede hacer con todos los bordes de la caja, sobre escribiendo el dado por defecto en el elemento, el orden es: ancho, estilo, color*/
+  border-radius: 8px; /*simula un circulo en las esquinas*/
+  height: 100px; /*Alto*/
+  width: 100px; /*Ancho*/
+  color: #0a0; /*color del contenido*/
+  background-color: darkgray;
+}
+
+hr {
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #ccc;
+  border-top: 0px;
+}
+.header {
+  margin: 0px 0px 1px 0px;
+  padding: 2px;
+  padding-left: 8px;
+  border-bottom: solid 1px #e0e0e0;
+}
+.mensaje {
+  margin: 0px 0px 1px 0px;
+  padding: 2px;
+  padding-left: 8px;
+  border-bottom: solid 1px #e0e0e0;
+}
+.footer {
+  margin: 0px;
+  padding: 8px;
+}
+.primary {
+  background-color: #4961e9;
+  color: #f0eef0;
+  padding: 4px;
+  border-style: solid;
+  border-color: #4961e9;
+}
+.secondary {
+  background-color: #afafaf;
+  color: #f0eef0;
+  padding: 4px;
+  border-style: solid;
+  border-color: #afafaf;
+}
