@@ -158,3 +158,44 @@ table th {
   border: solid 1px #000;
   border-top: solid 2px #000;
 }
+
+/*Display: es como se ve un elemento en la ventana pouede ser inline, inblock o none(no muestra el elemento), se pueden distinguir segun donde aparece el siguiente elemento*/
+p {
+  display: block;
+}
+span {
+  display: block;
+}
+.invisible {
+  display: none;
+}
+
+/*Maxwidth y posicion*/
+.ancho {
+  max-width: 500px; /*la dice al navegador cual es el ancho maximo que puede utilizar el selector, pero no indica el valor del ancho del elemento*/
+  background-color: aqua;
+  margin: auto; /*Centramos el contenido, siempre y cuando el elemento tenga display in block*/
+  position: static; /*Por defecto todos los elementos vienen con una posicion static, pero podemos ponerla en relativo(nueva posicion en base a donde swe encuentra)*/
+  position: relative;
+  left: 150px;
+  top: auto;
+  position: fixed; /*Deja el elemento en una posicion definida a lo largo de toda la pantalla, sin importar que hagamos scroll se van a seguir mostrando*/
+}
+
+/*overflow*/
+.over {
+  width: 100px;
+  height: 100px;
+  overflow: hidden; /* lo que esta dentro de la etiqueta se ve si esta en visible, si esta en hidden ocualta lo sobrante, en scroll, muestra las barras de navegacion, y si esta en auto, se muestran las barras de navegacion necesarios*/
+  overflow-x: scroll;
+  overflow-y: hidden; /*podemos separar las propiedades de overflow segun los ejes x y y*/
+}
+
+img {
+  float: right; /*provoca que el contenido que le sigue utilice el espacio restante en el lado opuesto*/
+}
+/*Selectores con decendientes, opacidad*/
+div p {
+  color: red;
+  opacity: 1; /*va del 0 al 1 para indicar la transparencia con decimales*/
+}
