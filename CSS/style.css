@@ -71,3 +71,90 @@ hr {
   border-style: solid;
   border-color: #afafaf;
 }
+
+/*Colores, alineado, text decoration, align,transform, indent, heigth*/
+p {
+  color: #4961e9; /*Color*/
+  text-align: left; /*Indica la alineacion del texto, puede ser center, right, left, start y justify*/
+  text-indent: 15px; /*indenta el text, aplica sangria*/
+  line-height: 1.5; /*interlineado entre renglon y renglon*/
+  word-spacing: 12px; /*agrega espacio entre las palabras del parrafo*/
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5 /*que tanto se aplica el color seleccionado del rgb*/); /*le agrega una sombra al texto, el orden es que tanto a la derecha, que tan abajo, que tan difuminado, y que color al final */
+}
+a {
+  text-decoration: none; /*Decoracion del texto puede ser: underline, overline, line-throgh*/
+  text-transform: capitalize; /*transforma la sintaxis del texto. puede ser capitalize(primera mayuscula), uppercase(todo mayusculas), lowercase(todo minusculas) */
+  letter-spacing: 3px; /*agrega espacio entre las letras del texto*/
+  background-color: indigo; /*en los links se puede cambiar el color del fondo, pudiendolos resaltar*/
+  padding: 5px;
+  margin-left: 15px;
+  border-radius: 50px;
+}
+
+/*Tipos de fuentes*/
+span {
+  color: #4961e9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: oblique; /*Estilo para la fuente, ppuede ser normal, italic(cursiva), oblique(parecida a la italica)*/
+  font-size: 20px; /*Tamaño*/
+  font-size: 1.5em; /*em es proporcional al dispositivo*/
+  font-weight: bold; /*Ancho del texto, puede ser una medida o un bold u normal*/
+  font-weight: 900; /*va del 100 al 900, de 100 en 100*/
+}
+
+a:link/*No visitado o no clickeado*/ {
+  color: lightcoral;
+  text-decoration: none;
+}
+a:visited/*link clickeado o visitado*/ {
+  color: #4961e9;
+  text-decoration: line-through;
+}
+a:hover/*mouse encima*/ {
+  color: gray;
+  border: solid 3px #000;
+  background-color: #0ff;
+  text-decoration: underline;
+}
+a:active /*cuando clickeamos el link*/ {
+  color: #000;
+}
+
+/*Para los elementos que estan dentro de otro elemento*/
+ul {
+  background-color: #fff;
+  border: solid 1px #ddd;
+  border-radius: 8px;
+  padding-left: 0px;
+}
+li {
+  border-bottom: solid 1px #ddd;
+  padding: 10px;
+}
+ul li {
+  list-style-type: none; /*cambia el mostrador de cada list item, puede ser circle(circulo vacio), square(cuadrado), upper-roman(numeros romanos), lower-alpha(alfabeto) y none*/
+}
+li:last-child/*child hace referencia a los hijos*/ {
+  border-bottom: none;
+}
+/*Tablas*/
+table {
+  width: 100%;
+  border-collapse: collapse; /*indica si queremos que la tabla tenga bordes en sus casillas*/
+}
+tr:nth-child(even)/*even(impares), odd(pares)*/ {
+  background-color: #ccc;
+}
+td {
+  padding: 8px;
+  border: solid 1px #000;
+}
+table th {
+  background-color: tomato;
+  color: #fff;
+  text-align: left;
+  padding: 10px 0px 10px 8px;
+  border: solid 1px #000;
+  border-top: solid 2px #000;
+}
