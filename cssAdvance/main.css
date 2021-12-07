@@ -1,0 +1,101 @@
+body {
+  background-color: #eee;
+}
+.fondo {
+  background-color: #f00;
+  background-image: url("https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"); /*La imagen porsi sola se repite a lo largo del contenedor debido al diplay block, y obtiene el mismo alto del contenedor*/
+  height: 10 0px; /*seteamos el valor del alto, y una vez que es mayor a la imagen se repite nuevamente pero verticalmente*/
+  background-repeat: no-repeat; /*Modificamos la propiedad de repeat, puede ser repeat(va horizon y vertical), no-repeat(no se repite), repeat-x(se repite horizontalmente), y repaeat-y(repeticion vertical)*/
+  background-position: bottom right; /*acomodamos la pocision de la imagen con right, bottom, left y top*/
+  background-attachment: fixed; /*Hace que la imagen de fondo se desplace con el scroll, puede tener un valor de scroll o de fixed*/
+  background-size: cover; /*permite que la imagen de fondo se expanda de forma natural para alcanzar el tamaño maximo de la pantalla*/
+  background: #111 url("https://cdn.jkanime.net/assets2/css/img/logo-dark.png") no-repeat left
+    bottom fixed; /*podemos declarar todo lo anterior en la propiedad general background respetando el orden anterios, a excepcion del bacground-size y el height de la imagen*/
+}
+
+/*Colores y opacidad*/
+.fondo {
+  background-color: rgba(
+    0,
+    35,
+    100,
+    1
+  ); /*0 es la ausencia total de colores, mientras el 255 es la plenitud de precensia de estos. y la opacidad es el grado de vista*/
+  background-color: hsl(
+    100%,
+    50%,
+    0.3
+  ); /*en el formato hsl, hue representa el color, siendo el rojo(0), verde(120), azul(240), siendo el maximo el 360. en saturation indicamos el porcentaje de saturcion del color entre el 0% y el 100%, y en lightness indicamos la cantidad de lumionosidad del color del 0%(negro) al 100%(blanco). Podemos agregarle la opacidad*/
+  opacity: 1; /*se puede agregar la opacidad tambien, pero afecta a todo el elemento, no solo al fondo*/
+}
+/*Gradientes: son los degradados en los colores*/
+.fondoGradientes {
+  background-image: linear-gradient(
+    direccion,
+    color1,
+    color2
+  ); /*lo usamos para setear el color de fondo degradado */
+  background-image: linear-gradient(to bottom right, yellow, green); /*usando direcciones */
+  background-image: repeating-linear-gradient(
+    0deg,
+    tomato 10%,
+    blue 20%
+  ); /*aca agregamos los porcentajes de cada cuanto cambia el color*/
+  background-image: linear-gradient(
+    55deg,
+    yellow,
+    rgb(165, 165, 165),
+    blue
+  ); /*usando grados, usando un rgb y agregando un color mas*/
+}
+/*Sombras*/
+.box {
+  box-shadow: 2px 5px blueviolet; /*si no le sumamos todos los elementos, se generaran los bordes*/
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3) inset; /*con el inset hacemos que la sombra este dentro del elemento, y con el alpha le agregamos transparencia al color de la sombra */
+}
+.texto {
+  color: #aaa;
+  text-shadow: 0px 1px 0px rgba(25, 12, 12, 0.9);
+}
+.contenido {
+  background-color: #fff;
+  box-shadow: 2px 2px 1px rgba(165, 165, 165, 1);
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  display: block; /*necesarrio que el display sea block para que la propiedad transform sea efectiva*/
+  transform: rotate(
+    50deg
+  ); /*con el rotate podemos hacer que el contenedor gire en sentido horario en base a grados*/
+  transform: translate(50px, 100px); /*mueve el elemento por la pagina en base a cordenadas x y y*/
+  transform: scale(
+    1,
+    1
+  ); /*indican el ancho y el alto multiplicado por los height y width indicados para que crezca el elemento*/
+  transform: scaleX(1.5);
+  transform: scaley(2); /*podemos separar el scale con scalex y scaleX*/
+  transform: skew(
+    25deg,
+    10deg
+  ); /*acuesta el elemento al hacer que los laterales tomen los angulos indicado en sentido antihorario, siendo el primer parametro para los verticales y el segundo atributo para los horizontales, se puede separar la propiedad usando skewX(para las verticales) y skewY(para los horizaontales)*/
+  transform: rotateX(45deg); /*se inclina hacia atras*/
+  transform: rotateY(45deg); /*se inclina hacia costado*/
+  transform: rotateZ(45deg); /*se rota el elemento en sentido horario*/
+}
+.contenido2d:hover {
+  transform: scale(1.5, 1.7);
+}
+
+.trancisiones {
+  width: 100px;
+  margin-left: 200px;
+  transition: width 0.3s 0.5s; /*la propiedad que afecta y la duracion de la trancision. si no se aclara la propiedad, afecta a todas las propiedades declaradas del evento*/
+  box-shadow: 1px 1px rgb(165, 165, 165);
+  transition-delay: 0.22s; /*con esto demoramos el inicio de la trancision*/
+}
+.trancisiones:hover {
+  /*Aca aclaramos el evento de trancision*/
+  width: 150px;
+}

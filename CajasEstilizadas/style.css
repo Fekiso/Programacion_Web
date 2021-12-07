@@ -1,0 +1,33 @@
+.container {
+  background-color: #fff;
+}
+.box {
+  width: 50%;
+  margin: 20px;
+  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.2);
+  border: solid 0.5px #aaa;
+  border-radius: 4px;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 0.3s 0.2s;
+}
+
+.roja {
+  border-left: 3px solid rgb(255, 0, 0);
+}
+.roja:hover {
+  transform: scale(1.05, 1.05);
+}
+.verde {
+  border-left: 3px solid rgb(55, 138, 55);
+}
+.verde:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 1px 1.5px 8px #aaa;
+}
+.azul {
+  border-left: 3px solid rgb(40, 40, 141);
+}
+.azul:hover {
+  background-color: rgba(40, 40, 141, 0.1);
+}
