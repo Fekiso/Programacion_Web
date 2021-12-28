@@ -1,0 +1,19 @@
+body {
+  background-color: #bbb;
+}
+.grid {
+  display: grid; /*habilitamos el css grid dentro del contrenedor utilizados*/
+  /*podemos usa grid(block) o inline-grid(solo el espacio que necesitan los elementos)*/
+  grid-template-rows: 50px 75px; /*da la altura predefinida a n lineas segun n atributos agregados, a las lineas siguientes les da un height automatico, y si sobran atributos por falta de lineas en el html, no figuran los atributos modificados*/
+  grid-template-columns: 5px 50px 300px, 400px; /*altera el width de las columnas, siendo la cantidad de atribuitos los que alteran la cantidad de columnas que se muestrean en una sola linea*/
+  grid-template-columns: 1fr 2fr 3fr; /*en lugar de usar los px, podemos usar los fr(fraccion), que divide la pagina dando la cantidad de fr en base a la suma de fr dado por columna */
+  grid-template-columns: 1% 4rem 2fr 3fr; /*tambien se puede usar rem, porcentajes y fracciones convinadas */
+  grid-template-rows: minmax(
+    100px,
+    auto
+  ); /*con min max nosotros determianamos el tamaño minimo y maximos que pueden llegar a tener en cada fila, el primer atibuto es height y el segundo el width*/
+  grid-template-columns: minmax(auto, 50%) 1fr 4rem; /*al agregarle mas atributos, podemos indicar que las demas columnas tomaran los valores ajenos a los indicados para la primer columna*/
+}
+.element {
+  background-color: red;
+}
